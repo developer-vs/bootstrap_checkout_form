@@ -4,4 +4,4 @@
 
 #### Verification of Payment method
 
-<a href="https://developer-vs.github.io/bootstrap_shipping_address/" target="_blank">Live preview</a>
+<a href="https://developer-vs.github.io/bootstrap_checkout_form/" target="_blank">Live preview</a>
