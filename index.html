@@ -18,8 +18,8 @@
   <title>Billing Information</title>
 </head>
 
-<body>
-  <div class="container py-4 bg-light">
+<body class="bg-light">
+  <div class="container py-4 my-2">
     <div class="row">
 
       <!-- Order Cart -->
@@ -202,7 +202,7 @@
                 <option>Washington</option>
                 <option>California</option>
               </select>
-              <div class="invalid-feedback">Please provide a valid state</div>
+              <div class="invalid-feedback">Please select a valid state</div>
             </div>
             <!-- End of State -->
 
@@ -234,67 +234,90 @@
 
           <hr class="mb-4">
 
-          <h4 class="mb-3">Payment</h4>
+          <h4 class="mb-3">Shipping Options</h4>
 
-          <!-- Payment Method -->
+          <!-- Shipping Options -->
           <div class="d-block my-3">
-            <div class="custom-control custom-radio ]">
-              <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="" required>
-              <label class="custom-control-label" name="credit-card" value="credit-card" for="credit"><span><i
-                    class="far fa-credit-card fa-lg"></i></span> Credit card</label>
+            <div class="custom-control custom-radio">
+              <input id="sameDay" name="shippingMethod" type="radio" class="custom-control-input" required>
+              <label class="custom-control-label" name="sametDay" value="sametDay" for="sameDay">Same Day
+                Shipping</label>
             </div>
             <div class="custom-control custom-radio">
-              <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-              <label class="custom-control-label" name="debit-card" value="debit-card" for="debit"><span><i
-                    class="far fa-credit-card fa-lg"></i></span> Debit card</label>
+              <input id="nextDay" name="shippingMethod" type="radio" class="custom-control-input" required>
+              <label class="custom-control-label" name="nextDay" value="nextDayd" for="nextDay">Next Day
+                Shipping</label>
             </div>
             <div class="custom-control custom-radio">
-              <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
-              <label class="custom-control-label" name="paypal" value="paypal" for="paypal"><span><i
-                    class="fab fa-cc-paypal fa-lg"></i></span> PayPal</label>
+              <input id="slowShipping" name="shippingMethod" type="radio" class="custom-control-input" required>
+              <label class="custom-control-label" name="slowShipping" value="slowShipping" for="slowShipping">3-5
+                Business
+                Days Shipping</label>
             </div>
-          </div>
 
-          <!-- Name on card and card number -->
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <label for="cc-name">Name on card</label>
-              <input type="text" class="form-control" id="cc-name" placeholder="" required>
-              <small class="text-muted">Full name as displayed on card</small>
-              <div class="invalid-feedback">
-                Name on card is required
+            <hr class="mb-4">
+
+            <h4 class="mb-3">Payment</h4>
+
+            <!-- Payment Method -->
+            <div class="d-block my-3">
+              <div class="custom-control custom-radio">
+                <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                <label class="custom-control-label" name="credit-card" value="credit-card" for="credit"><span><i
+                      class="far fa-credit-card fa-lg"></i></span> Credit card</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                <label class="custom-control-label" name="debit-card" value="debit-card" for="debit"><span><i
+                      class="far fa-credit-card fa-lg"></i></span> Debit card</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+                <label class="custom-control-label" name="paypal" value="paypal" for="paypal"><span><i
+                      class="fab fa-cc-paypal fa-lg"></i></span> PayPal</label>
               </div>
             </div>
-            <div class="col-md-6 mb-3">
-              <label for="cc-number">Credit card number</label>
-              <input type="text" class="form-control" id="cc-number" placeholder="" required>
-              <div class="invalid-feedback">
-                Credit card number is required
+
+            <!-- Name on card and card number -->
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="cc-name">Name on card</label>
+                <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                <small class="text-muted">Full name as displayed on card</small>
+                <div class="invalid-feedback">
+                  Name on card is required
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="cc-number">Credit card number</label>
+                <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                <div class="invalid-feedback">
+                  Credit card number is required
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- Card expiration date and security code -->
-          <div class="row">
-            <div class="col-md-3 mb-3">
-              <label for="cc-expiration">Expiration</label>
-              <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
-              <div class="invalid-feedback">
-                Expiration date is required
+            <!-- Card expiration date and security code -->
+            <div class="row">
+              <div class="col-md-3 mb-3">
+                <label for="cc-expiration">Expiration</label>
+                <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
+                <div class="invalid-feedback">
+                  Expiration date is required
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="cc-cvv">CVV</label>
+                <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+                <div class="invalid-feedback">
+                  Security code is required
+                </div>
               </div>
             </div>
-            <div class="col-md-3 mb-3">
-              <label for="cc-cvv">CVV</label>
-              <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
-              <div class="invalid-feedback">
-                Security code is required
-              </div>
-            </div>
-          </div>
 
-          <hr class="mb-4">
+            <hr class="mb-4">
 
-          <button class="btn btn-info btn-lg btn-block" type="submit">Continue to checkout</button>
+            <button class="btn btn-info btn-lg btn-block" type="submit">Continue to checkout</button>
 
         </form>
       </div>
@@ -308,7 +331,7 @@
       <script>
         window.jQuery || document.write(
           '<script src="https://getbootstrap.com/docs/4.3/assets/js/vendor/jquery-slim.min.js crossorigin="anonymous"><\/script>'
-          )
+        )
       </script>
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -317,6 +340,8 @@
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
       </script>
+
+      <!-- Form validation script -->
       <script src="https://getbootstrap.com/docs/4.3/examples/checkout/form-validation.js" crossorigin="anonymous">
       </script>
 </body>
